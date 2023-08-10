@@ -1,0 +1,766 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSC 444 - Data Visualization</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jalevine.bitbucket.io/csc444/">
+  <link rel="alternate" type="application/rss+xml" title="Joshua A. Levine" href="/feed.xml">
+</head>
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" href="/">Joshua A. Levine</a>
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+      <div class="trigger">
+          <a class="page-link" href="/pubs/">Publications</a>
+          <a class="page-link" href="/notes/">Notes</a>
+          <a class="page-link" href="/news/">News</a>
+          <a class="page-link" href="/teaching/">Teaching</a>
+      </div>
+    </nav>
+  </div>
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">CSC 444 - Data Visualization</h1>
+    <h2 itemprop="name headline">Fall 2021</h2>
+  </header>
+  <div class="post-content">
+<table>
+<tr>
+<td class="td_left2" style="width: 550px;">
+Meets: T/R 9:30-10:45am, Spch & Hearing Sci, Rm 205<br />
+Instructor: Joshua A. Levine<br />
+Office: <a href="https://arizona.zoom.us/j/81747472400">Online via Zoom</a>, <a href="https://calendly.com/ua-csc444-fall2021/office-hours">Schedule via Calendly</a><br />
+Office Hours: M 3:30-4:30pm, T 3:00-4:00pm<br />
+<br/>
+TAs:<ul>
+<li>Zhenge Zhao, zhengezhao@email.arizona.edu</li>
+<li>Deep Mehta, deepmehta@email.arizona.edu</li>
+</ul>
+TA Office Hours (primarily for issues with grading):
+<ul>
+<li>Zhenge Zhao, F 11:00am-12:00pm, (<a href="https://arizona.zoom.us/j/81747472400">online via Zoom</a>)</li>
+<li>Deep Mehta, R 11:30am-12:30pm, (<a href="https://arizona.zoom.us/j/81747472400">online via Zoom</a>)</li>
+</ul>
+<a href="syllabus.html">Course Syllabus</a><br />
+<a href="https://d2l.arizona.edu/d2l/home/1071719">D2L</a><br />
+<a href="https://piazza.com/arizona/fall2021/csc444/home">Piazza</a><br />
+<br />
+<br />
+<h4>Course Calendar</h4>
+<div><em>(tentative, subject to change)</em></div><br>
+<table>
+<tr>
+<td class="td_jusc">Week</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Tuesday</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Thursday</td>
+</tr>
+<tr><td colspan="5" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 2px solid black;"></td></tr>
+<tr>
+<td class="td_jusc">1</td>
+<td class="td_jusr">Aug 24</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/08/24/L01.html">Introduction</a></td>
+<td class="td_jusr">Aug 26</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/08/26/L02.html">HTML/CSS/SVG Basics</a></td>
+</tr>
+<tr>
+<td class="td_jusc">2</td>
+<td class="td_jusr my_highlight">Aug 31</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/08/31/L03.html">Javascript Basics</a></td>
+<td class="td_jusr my_highlight2">Sep 02</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/02/L04.html">Javascript + DOM, SVG</a></td>
+</tr>
+<tr>
+<td class="td_jusc">3</td>
+<td class="td_jusr my_highlight">Sep 07</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/07/L05.html">d3 Intro</a></td>
+<td class="td_jusr">Sep 09</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/09/L06.html">d3 Joins and Scales</a></td>
+</tr>
+<tr>
+<td class="td_jusc">4</td>
+<td class="td_jusr my_highlight">Sep 14</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/14/L07.html">Design Principles</a></td>
+<td class="td_jusr">Sep 16</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/16/L08.html">Perception</a></td>
+</tr>
+<tr>
+<td class="td_jusc">5</td>
+<td class="td_jusr my_highlight">Sep 21</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/21/L09.html">Data Abstraction</a></td>
+<td class="td_jusr">Sep 23</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/23/L10.html">Visual Encoding</a></td>
+</tr>
+<tr>
+<td class="td_jusc">6</td>
+<td class="td_jusr">Sep 28</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/28/L11.html">Color</a></td>
+<td class="td_jusr my_highlight">Sep 30</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/09/30/L12.html">Color in d3</a></td>
+</tr>
+<tr>
+<td class="td_jusc">7</td>
+<td class="td_jusr">Oct 05</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/10/05/L13.html">Tasks and Interaction</a></td>
+<td class="td_jusr my_highlight">Oct 07</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/10/07/L14.html">Views, Focus+Context</a></td>
+</tr>
+<tr>
+<td class="td_jusc">8</td>
+<td class="td_jusr">Oct 12</td>
+<td class="td_jusl">Midterm</td>
+<td class="td_jusr">Oct 14</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/10/14/L16.html">Tabular Arrangements</a></td>
+</tr>
+<tr>
+<td class="td_jusc">9</td>
+<td class="td_jusr my_highlight">Oct 19</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/10/19/L17.html">Hierarchies/Trees</a></td>
+<td class="td_jusr">Oct 21</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/10/21/L18.html">Graphs</a></td>
+</tr>
+<tr>
+<td class="td_jusc">10</td>
+<td class="td_jusr">Oct 26</td>
+<td class="td_jusl">-- IEEE VIS 2021 --</td>
+<td class="td_jusr my_highlight3">Oct 28</td>
+<td class="td_jusl">-- IEEE VIS 2021 --</td>
+</tr>
+<tr>
+<td class="td_jusc">11</td>
+<td class="td_jusr">Nov 02</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/02/L19.html">Cartography</a></td>
+<td class="td_jusr my_highlight">Nov 04</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/04/L20.html">Interpolation</a></td>
+</tr>
+<tr>
+<td class="td_jusc">12</td>
+<td class="td_jusr my_highlight">Nov 09</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/09/L21.html">Isosurfaces</a></td>
+<td class="td_jusr">Nov 11</td>
+<td class="td_jusl">-- Veterans Day --</td>
+</tr>
+<tr>
+<td class="td_jusc">13</td>
+<td class="td_jusr">Nov 16</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/16/L22.html">Volume Rendering</a></td>
+<td class="td_jusr my_highlight">Nov 18</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/18/L23.html">Transfer Function Design</a></td>
+</tr>
+<tr>
+<td class="td_jusc">14</td>
+<td class="td_jusr">Nov 23</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/23/L24.html">Flow Visualization</a></td>
+<td class="td_jusr">Nov 25</td>
+<td class="td_jusl">-- Thanksgiving --</td>
+</tr>
+<tr>
+<td class="td_jusc">15</td>
+<td class="td_jusr my_highlight">Nov 30</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/11/30/L25.html">Text and Sets</a></td>
+<td class="td_jusr">Dec 02</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/12/02/L26.html">Retrospective</a></td>
+</tr>
+<tr>
+<td class="td_jusc">16</td>
+<td class="td_jusr my_highlight">Dec 07</td>
+<td class="td_jusl"><a href="/csc444/lectures/2021/12/07/L27.html">Final Exam Review</a></td>
+<td class="td_jusr">Dec 09</td>
+<td class="td_jusl">-- Reading Day --</td>
+</tr>
+</table>
+<br />
+<!--
+<strong>Final Exam: Sun., Dec 12 8:00am - Tues., Dec 14, 10:00am, Spch & Hearing Sci, Rm 205</strong><br />
+-->
+<strong>Final Exam: Sun., Dec 12 8:00am - Tues., Dec 14, 10:00am, Gradescope</strong><br />
+<span class="my_highlight" style="padding:5px;">Highlighted</span> dates have an assignment <strong>due</strong> by the start of class.<br /><br />
+<span class="my_highlight2" style="padding:5px;">Boxed</span> dates correspond to the nearest class day to the deadlines for dropping (without a W) and withdrawing for this semester.  See <a href="https://registrar.arizona.edu/dates-and-deadlines/">Fall 2021 Undergraduate Dates and Deadlines</a> for complete details. <br/>
+<br/>
+<a href="https://drive.google.com/drive/folders/0BzLutf-vEIUYfmo4Ymc1V0RVZFZFdGFpQ3VzS21lcnh2d1JydV8yUktfMTgwbFJxbExiR0E?resourcekey=0-jscGRoDV9217UzKOl3c4wA&usp=sharing">Link to Google drive folder with all lecture slides</a><br/>
+<br/>
+<br/>
+<br/>
+<!--
+<table>
+<tr>
+<td class="td_jusc">Week</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Monday</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Wednesday</td>
+</tr>
+<tr><td colspan="5" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 2px solid black;"></td></tr>
+</table>
+-->
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/08/24/L01.html">Lecture 01</a> - Introduction
+		<p class="meta">Date: August 24, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="/csc444/syllabus.html">Course Syllabus</a></li>
+<li><a href="/csc444/netiquette.html">Netiquette Rules</a></li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.ted.com/index.php/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html">Hans Rosling, TED 2006</a></li>
+<li><a href="http://cacm.acm.org/magazines/2010/6/92482-a-tour-through-the-visualization-zoo/pdf">A Tour through the Visualization Zoo.</a>, Jeffrey Heer, Michael Bostock, Vadim Ogievetsky. Communications of the ACM, 53(6) pp. 59-67, Jun 2010.</li>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture1.html#a-tour-of-visualizations-good-bad-and-ugly">A Tour of Visualizations, Good, Bad, and Ugly</a> Carlos Scheidegger (CSC 444 Fall 2019).</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/08/26/L02.html">Lecture 02</a> - HTML/CSS/SVG Basics
+		<p class="meta">Date: August 26, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture2.html">The Basics of the Web Stack</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+<li>Murray, Chapter 3, pgs. 17-36, 52-62 (all pages except for the section on Javasript)  (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l02_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l02_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/08/31/L03.html">Lecture 03</a> - Javascript Basics
+		<p class="meta">Date: August 31, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture3.html">Javascript</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+<li>Murray, Chapter 3, pgs. 36-52 (the remaining section on Javascript) (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://speakingjs.com/es5/ch01.html">Speaking JavaScript: An In-Depth Guide for Programmers - Chapter 1. Basic JavaScript</a> (note, most chapters of this book cover Javascript in great detail, but the focus of the book is ES5)</li>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming</a> (note, this is included as a reference.  The book is a great way to learn ES6, but you need not read it all at once)</li>
+<li><a href="https://graphics.cs.wisc.edu/WP/cs559-sp2019/javascript/#Advice_on_Learning_JavaScript">Advice on Learning Javascript</a> - Michael Gleicher (Wisconsin).  Other than the textbook links, check out the video lectures at the bottom of this page for more repetition on the basics of the language, closures, and more</li>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture3/activities.html">Lecture 3 Activities</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l03_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l03_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/02/L04.html">Lecture 04</a> - Javascript + DOM, SVG
+		<p class="meta">Date: September 02, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture4.html">DOM Manipulation</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l04_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l04_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/07/L05.html">Lecture 05</a> - d3 Intro
+		<p class="meta">Date: September 07, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Murray, Chapter 5,6 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture5.html">Welcome to d3</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li>Bostock, <a href="https://bost.ocks.org/mike/circles/">Three Little Circles</a></li>
+<li>Bostock, <a href="https://bost.ocks.org/mike/join/">Thinking with Joins</a></li>
+<li>Bostock, <a href="https://bost.ocks.org/mike/selection/">How Selections Work</a></li>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l05_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l05_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/09/L06.html">Lecture 06</a> - d3 Joins and Scales
+		<p class="meta">Date: September 09, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Murray, Chapter 7 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+<li><a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture6.html">d3 Scales</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://cscheid.net/projects/d3-drills/">d3 Drills</a> - Carlos Scheidegger (CSC 444 Fall 2019).</li>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l06_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l06_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/14/L07.html">Lecture 07</a> - Design Principles
+		<p class="meta">Date: September 14, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 1, 6.10 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://soundcloud.com/roman-mars/99-invisible-04-99-details">99% Details.</a> Podcast from 99% Invisible, Sep 2010.</li>
+<li>Edward Tufte, <a href="http://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a>, 2001.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/16/L08.html">Lecture 08</a> - Perception
+		<p class="meta">Date: September 16, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Ware, <a href="http://www.sciencedirect.com/science/book/9780123814647">Information Visualization</a>, Chapter 3. Note that this book is free to access on campus (the above link will not work off campus).</li>
+<li><a href="http://www.csc.ncsu.edu/faculty/healey/PP/">Attention and Visual Memory in Visualization and Computer Graphics.</a> Christopher G. Healey, James T. Enns. IEEE Trans. Vis. Comput. Graph. 18(7): 1170-1188 (2012)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.nature.com/nmeth/journal/v7/n11/full/nmeth1110-863.html">Gestalt principles (Part 1) Bang Wong.</a> Nature Methods 7, pp. 863, Nov 2010.</li>
+<li><a href="http://www.nature.com/nmeth/journal/v7/n12/full/nmeth1210-941.html">Gestalt principles (Part 2) Bang Wong.</a> Nature Methods 7, pp. 941, Dec 2010.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/21/L09.html">Lecture 09</a> - Data Abstraction
+		<p class="meta">Date: September 21, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 2 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.jstor.org/pss/1671815">On the Theory of Scales of Measurement.</a> S. S. Stevens. Science, 103(2684), pp. 677-680, June 1946.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/23/L10.html">Lecture 10</a> - Visual Encoding
+		<p class="meta">Date: September 23, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 5, 6.3-6.6 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://www.jstor.org/stable/2288400">Graphical Perception: Theory, Experimentation, and Appliation to the Development of Graphical Methods.</a> William S. Cleveland and Robert McGill, Journal of the American statistical association 79, no. 387 (1984): 531-554.</li>
+<li><a href="http://dl.acm.org/citation.cfm?id=22950">Automating the Design of Graphical Presentations of Relational Information.</a> Jock Mackinlay. ACM TOG 5(2), 1986.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/28/L11.html">Lecture 11</a> - Color
+		<p class="meta">Date: September 28, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 10.1-10.3, 6.9 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li>Ware, <a href="http://www.sciencedirect.com/science/book/9780123814647">Information Visualization</a>, Chapter 4. Note that this book is free to access on campus (the above link will not work off campus).</li>
+<li><a href="https://www.wnycstudios.org/podcasts/radiolab/episodes/211119-colors">Color (listen)</a> - Radiolab</li>
+<li><a href="http://www.stonesc.com/pubs/Stone%20CGA%2007-2005.pdf"> Representing Colors as Three Numbers.</a> Maureen Stone, Computer Graphics and Applications, 25(4), July 2005, pp. 78-85.</li>
+<li><a href="https://bl.ocks.org/mbostock/3014589">Lab and HCL Color Spaces</a> - Mike Bostock.</li>
+<li><a href="http://youtu.be/evQsOFQju08">Is Your Red The Same as My Red? (watch)</a> - Vsauce.</li>
+<li><a href="http://brucelindbloom.com"> http://www.brucelindbloom.com</a> Bruce Lindbloom. Useful color information, studies, and Files.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/09/30/L12.html">Lecture 12</a> - Color in d3
+		<p class="meta">Date: September 30, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="http://www.personal.psu.edu/faculty/c/a/cab38/ColorSch/ASApaper.html">Color Use Guidelines for Mapping and Visualization</a>. Cynthia A. Brewer. Proceedings of the Section on Statistical Graphics, American Statistical Association, Alexandria VA. pp. 55-60. 1999.<br/>See also: <a href="http://colorbrewer2.org/">Colorbrewer: Color Advice for Maps</a></li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4118486">Rainbow Color Map (Still) Considered Harmful.</a> D. Borland and R. Taylor. Computer Graphics and Applications, 27(2), pp. 14-17, 2007.</li>
+<li><a href="https://github.com/d3/d3-scale-chromatic">d3-scale-chromatic</a></li>
+<li><a href="https://cscheid.net/projects/d3-scale-playground/">D3 Scales Playground</a> - Carlos Scheidegger.</li>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l12_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l12_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/10/05/L13.html">Lecture 13</a> - Tasks and Interaction
+		<p class="meta">Date: October 05, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 3, 6.8, 11 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=1249004">Smooth and Efficient Zooming and Panning</a>. Jack J. van Wijk and Wim A.A. Nuij, Proc. InfoVis 2003, p. 15-22</li>
+<li><a href="http://vis.berkeley.edu/papers/animated_transitions/">Animated Transitions in Statistical Data Graphics</a>. Jeffrey Heer and George G. Robertson. IEEE TVCG (Proc. InfoVis 2007) 13(6): 1240-1247, 2007.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/10/07/L14.html">Lecture 14</a> - Views, Focus+Context
+		<p class="meta">Date: October 07, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 12, 6.7, 14 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+<li><a href="http://research.microsoft.com/pubs/75818/cockburn-ComputingSurveys09.pdf">A review of overview+detail, zooming, and focus+context interfaces</a>. Andy Cockburn, Amy Karlson, and Benjamin B. Bederson. ACM Computing Surveys 41(1), 2008.</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://www.jstor.org/stable/1390777">The visual design and control of the trellis display</a>. R. Becker, W. Cleveland, M. Shyu. Journal of Computational and Graphical Statistics, 5(2), 1996.</li>
+<li><a href="http://graphics.pixar.com/people/derose/publications/ToolGlass/paper.pdf">Toolglass and magic lenses: the see-through interface</a>. Eric A. Bier, Maureen C. Stone, Ken Pier, William Buxton, and Tony D. DeRose, Proc. SIGGRAPH, pp. 73-76, 1993.</li>
+<li><a href="http://ivlab.cs.umn.edu/generated/pub-Keefe-2009-MultiViewVis.php">Interactive Coordinated Multiple-View Visualization of Biomechanical Motion Data</a>. Daniel F. Keefe, Marcus Ewert, William Ribarsky, Remco Chang. IEEE Trans. Visualization and Computer Graphics (Proc. Vis 2009), 15(6):1383-1390, 2009.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/10/14/L16.html">Lecture 16</a> - Tabular Arrangements
+		<p class="meta">Date: October 14, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 7, 15.3-15.5 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://vis.berkeley.edu/papers/banking/">Multi-Scale Banking to 45 Degrees</a>. Jeffrey Heer, Maneesh Agrawala. Proc. InfoVis 2006, published as IEEE Transactions on Visualization and Computer Graphics (TVCG), 12(5), Sep/Oct 2006, pages 701-708.</li>
+<li><a href="http://sgratzl.github.io/paper-2013-lineup/">LineUp: Visual Analysis of Multi-Attribute Rankings</a>. Samuel Gratzl, Alexander Lex, Nils Gehlenborg, Hanspeter Pfister and Marc Streit. IEEE Transactions on Visualization and Computer Graphics (InfoVis), 2013.</li>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4658136">Stacked Graphs - Geometry & Aesthetics</a>.  Lee Byron, Martin Wattenberg. Proceedings of InfoVis 2008.</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=809866">Hierarchical Parallel Coordinates for Exploration of Large Datasets</a>. Ying-Huey Fua, Matthew O. Ward, and Elke A. Rundensteiner. IEEE Visualization 1999.</li>
+<li><a href="https://jalevine.bitbucket.io/csc444/nutrients">Clone of Nutrient Explorer</a>.  Original from <a href="http://bl.ocks.org/syntagmatic/3150059">http://bl.ocks.org/syntagmatic/3150059</a></li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/10/19/L17.html">Lecture 17</a> - Hierarchies/Trees
+		<p class="meta">Date: October 19, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 9 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6056510">Treevis.net: A Tree Visualization Reference</a>. Hans-Jorg Schulz, IEEE CG&A, 31(6), pp. 11-15, Nov.-Dec. 2011.<br/>See also: <a href="http://treevis.net/">A Visual Bibliography of Tree Visualization</a>. InfoVis 2010 Best Poster.</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=801860">Cushion Treemaps: visualization of hierarchical information</a>. Jack J. van Wijk and Huub van de Wetering, Proc InfoVis 1999, pp 73-78.</li>
+<li><a href="https://github.com/UA-CSC444-Spring2021/l17_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Spring2021/l17_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/10/21/L18.html">Lecture 18</a> - Graphs
+		<p class="meta">Date: October 21, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/221135">A technique for drawing directed graphs</a>. Emden R. Gansner, Eleftherios Koutsofios, Stephen C. North, and Kiem-Phong Vo, IEEE Trans. on Software Engineering 19(3), 214-230, 1993.</li>
+<li><a href="https://ieeexplore.ieee.org/document/4015425">Hierarchical Edge Bundles: Visualization of Adjacency Relations in Hierarchical Data</a>. Danny Holten, Proc InfoVis 06, published as IEEE TVCG 12(5), p 741-748, 2006.</li>
+<li>Murray, Chapter 11 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/02/L19.html">Lecture 19</a> - Cartography
+		<p class="meta">Date: November 02, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 8.1-8.3 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.win.tue.nl/~vanwijk/myriahedral/CAJ103.pdf">Unfolding the Earth: Myriahedral Projections</a>. Jarke J. van Wijk, The Cartographic Journal, Vol. 45, No. 1, pp.32-42, February 2008.  See also <a href="http://www.win.tue.nl/~vanwijk/myriahedral/">Additional Media</a>.</li>
+<li>Bostock, <a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">Command-Line Cartography</a></li>
+<li>Murray, Chapter 12 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/interactive-data-visualization/9781491921296/?ar">UA Library</a> for those on campus)</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/04/L20.html">Lecture 20</a> - Interpolation
+		<p class="meta">Date: November 04, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://github.com/d3/d3-interpolate">d3-interpolate</a></li>
+<li>Telea, Chapter 3.1-3.2 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466585263">UA Library</a> for those on campus)</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1260759">Human Factors in Visualization Research</a>. Melanie Tory, Torsten M&ouml;ller. IEEE Trans. Vis. Comput. Graph. 10(1): 72-84, 2004.</li>
+<li><a href="https://github.com/UA-CSC444-Fall2021/l20_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC444-Fall2021/l20_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/09/L21.html">Lecture 21</a> - Isosurfaces
+		<p class="meta">Date: November 09, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 8.4.1 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://dl.acm.org/citation.cfm?id=37422">Marching Cubes: A High Resolution 3D Surface Construction Algorithm</a>. William E. Lorensen and Harvey E. Cline, Computer Graphics (Proceedings of SIGGRAPH 87), 21 (4), pp. 163-169 (July 1987, Anaheim, California).</li>
+<li><a href="http://www.cpsc.ucalgary.ca/~blob/papers/softobjects.pdf">Data structures for soft objects</a>. Geoff Wyvill, Craig McPheeters, Brian Wyvill. The Visual Computer 2(4): 227-234 (1986).</li>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=175782">The Asymptotic Decider: Resolving the Ambiguity in Marching Cubes</a>. Gregory M. Nielson, Bernd Hamann. IEEE Visualization 1991: 83-93</li>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=489388">A Near Optimal Isosurface Extraction Algorithm Using the Span Space</a>. Yarden Livnat, Han-Wei Shen, Christopher R. Johnson. IEEE Trans. Vis. Comput. Graph. 2(1): 73-84 (1996)</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/16/L22.html">Lecture 22</a> - Volume Rendering
+		<p class="meta">Date: November 16, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 8.4.2 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li>Telea, Chapter 2, 3.3-3.5 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466585263">UA Library</a> for those on campus)</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=511">Display of Surfaces from Volume Data</a>. Marc Levoy, IEEE Computer Graphics and Applications, 8(3), 29-37, 1988.<br/>You may also want to read the <a href="http://www-graphics.stanford.edu/papers/volume-cga88/">errata</a>.</li>
+<li><a href="http://www.amazon.com/Real-Time-Graphics-Klaus-Engel/dp/1568812663">Real-Time Volume Graphics</a>. Klaus Engel, Markus Hadwiger, Joe Kniss, Aaron Lefohn, Christof Rezk-Salama and Daniel Weiskopf. In ACM Siggraph 2004, Course 28, 2004.<br/>While I recommend the book, you can Focus on Chapters 1, 3 and Sections III and VII in the <a href="http://dl.acm.org/citation.cfm?id=1103929">coursenotes their SIGGRAPH 2004 course</a>, as well as<br/>the slides from newer <a href="http://www.real-time-volume-graphics.org/?page_id=28">coursenotes from EG 2006</a>, specifically parts 1,3,5-7.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/18/L23.html">Lecture 23</a> - Transfer Function Design
+		<p class="meta">Date: November 18, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=920623">The Transfer Function Bake-Off</a>. Hanspeter Pfister, William E. Lorensen, Chandrajit L. Bajaj, Gordon L. Kindlmann, William J. Schroeder, Lisa Sobierajski Avila, Ken Martin, Raghu Machiraju, Jinho Lee. IEEE Computer Graphics and Applications 21(3): 16-22 (2001).</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1021579">Multidimensional Transfer Functions for Interactive Volume Rendering</a>. Joe Kniss, Gordon L. Kindlmann, Charles D. Hansen IEEE Trans. Vis. Comput. Graph. 8(3): 270-285 (2002).<br/>The original paper was Best Paper, Vis 2001: <a href="http://www.cs.utah.edu/~jmk/vis01/">Interactive Volume Rendering Using Multi-Dimensional Transfer Functions and Direct Manipulation Widgets</a>. Joe Kniss, Gordon L. Kindlmann, Charles D. Hansen. IEEE Visualization, pp. 255-262, 2001.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/23/L24.html">Lecture 24</a> - Flow Visualization
+		<p class="meta">Date: November 23, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Munzner, Chapter 8.5 (Note: the textbook is available electronically through the <a href="https://learning.oreilly.com/library/view/~/9781466508910/?ar">UA Library</a> for those on campus)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://bestphysicsvideos.blogspot.com/2012/02/flow-visualization.html">Flow Visualization</a>. Stephen Kline (National Committee for Fluid Mechanics Films). 35 min running time.<br/>Check out the <a href="http://web.mit.edu/hml/ncfmf/05FV.pdf">Film Notes</a> as well.</li>
+<li><a href="https://cscheid.net/writing/data_science/odes/index.html">Integrating ODEs Numerically.</a> Carlos Scheidegger (CSC 444 Fall 2019)</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1359732">Comparing 2D Vector Field Visualization Methods: A User Study</a>. David H. Laidlaw, Robert M. Kirby, Cullen D. Jackson, J. Scott Davidson, Timothy S. Miller, Marco da Silva, William H. Warren, Michael J. Tarr. IEEE Trans. Vis. Comput. Graph. 11(1): 59-70 (2005).</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5290738">Time and Streak Surfaces for Flow Visualization in Large Time-Varying Data Sets</a>.  Harinarayan Krishnan, Christoph Garth, Kenneth I. Joy.  IEEE Trans. Vis. Comput. Graph. 15(6): 1267-1274 (2009)</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/11/30/L25.html">Lecture 25</a> - Text and Sets
+		<p class="meta">Date: November 30, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.cc.gatech.edu/~stasko/papers/iv08-jigsaw.pdf">Jigsaw: Supporting Investigative Analysis through Interactive Visualization</a>. John T. Stasko, Carsten G&ouml;rg, Zhicheng Liu. Information Visualization 7(2): 118-132 (2008).<br/>See also, <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Additional Media</a>.</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6876017">UpSet: Visualization of Intersecting Sets</a>. Alexander Lex, Nils Gehlenborg, Hendrik Strobelt, Romain Vuillemot, Hanspeter Pfister.  IEEE Trans. Vis. Comput. Graph. 20(12): 1983-1992 (2014)</li>
+<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5290706">Bubble Sets: Revealing Set Relations with Isocontours over Existing Visualizations</a>. Christopher Collins, Gerald Penn, M. Sheelagh T. Carpendale. IEEE Trans. Vis. Comput. Graph. 15(6): 1009-1016 (2009)</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+  <div class="div_left">
+		<a href="/csc444/lectures/2021/12/02/L26.html">Lecture 26</a> - Retrospective
+		<p class="meta">Date: December 02, 2021</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="https://medium.com/multiple-views-visualization-research-explained/lets-do-virtuous-data-visualization-63cbd8f3115">Let’s Do Virtuous Data Visualization.</a> Michael Correll (medium)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://ieeexplore.ieee.org/abstract/document/376601">After the storm: Considerations for information visualization.</a> M. Pauline Baker and Colleen Bushell.  IEEE CG&A 15(3): 12-15, 1995.</li>
+<li><a href="https://arxiv.org/abs/1811.07271">Ethical Dimensions of Visualization Research.</a> Michael Correll.  ACM CHI, pp. 1-13. 2019.</li>
+<li><a href="https://dl.acm.org/doi/10.1145/2702123.2702608">How Deceptive are Deceptive Visualizations?: An Empirical Analysis of Common Distortion Techniques.</a>  Anshul Vikram Pandey, Katharina Rall, Margaret L. Satterthwaite, Oded Nov, Enrico Bertini.  ACM CHI, pp. 1469-1478, 2015.</li>
+</ul>
+		</div>
+	</div>
+  <br/>
+</td>
+<td class="td_right" style="width: 250px;">
+<!--
+<p class="div_right">
+</p >
+<br /><br />
+-->
+<p class="div_right">
+<a href="/csc444/assignments/2021/08/24/A01.html">A01</a>
+- Survey<br />
+&nbsp; Assigned: Aug 24<br />
+&nbsp; Due: Aug 31 09:29:59 AM<br />
+&nbsp; Graded: Sep 06<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/08/31/A02.html">A02</a>
+- HTML + SVG<br />
+&nbsp; Assigned: Aug 31<br />
+&nbsp; Due: Sep 07 09:29:59 AM<br />
+&nbsp; Graded: Sep 13<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/09/07/A03.html">A03</a>
+- Javascript<br />
+&nbsp; Assigned: Sep 07<br />
+&nbsp; Due: Sep 14 09:29:59 AM<br />
+&nbsp; Graded: Sep 20<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/09/14/A04.html">A04</a>
+- D3<br />
+&nbsp; Assigned: Sep 14<br />
+&nbsp; Due: Sep 21 09:29:59 AM<br />
+&nbsp; Graded: Sep 27<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/09/21/A05.html">A05</a>
+- Scales, Axes, Transitions<br />
+&nbsp; Assigned: Sep 21<br />
+&nbsp; Due: Sep 30 09:29:59 AM<br />
+&nbsp; Graded: Oct 06<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/09/30/A06.html">A06</a>
+- Color Spaces<br />
+&nbsp; Assigned: Sep 30<br />
+&nbsp; Due: Oct 07 09:29:59 AM<br />
+&nbsp; Graded: Oct 13<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/10/07/A07.html">A07</a>
+- Linked Views, Brushing<br />
+&nbsp; Assigned: Oct 07<br />
+&nbsp; Due: Oct 19 09:29:59 AM<br />
+&nbsp; Graded: Oct 25<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/10/19/A08.html">A08</a>
+- Parallel Coordinates<br />
+&nbsp; Assigned: Oct 19<br />
+&nbsp; Due: Oct 28 09:29:59 AM<br />
+&nbsp; Graded: Nov 03<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/10/26/A09.html">A09</a>
+- IEEE VIS<br />
+&nbsp; Assigned: Oct 26<br />
+&nbsp; Due: Nov 04 09:29:59 AM<br />
+&nbsp; Graded: Nov 10<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/10/28/A10.html">A10</a>
+- Treemaps<br />
+&nbsp; Assigned: Oct 28<br />
+&nbsp; Due: Nov 09 09:29:59 AM<br />
+&nbsp; Graded: Nov 15<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/11/09/A11.html">A11</a>
+- Marching Squares<br />
+&nbsp; Assigned: Nov 09<br />
+&nbsp; Due: Nov 18 09:29:59 AM<br />
+&nbsp; Graded: Nov 24<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/11/18/A12.html">A12</a>
+- Transfer Functions<br />
+&nbsp; Assigned: Nov 18<br />
+&nbsp; Due: Nov 30 09:29:59 AM<br />
+&nbsp; Graded: Dec 06<br />
+</p >
+<p class="div_right">
+<a href="/csc444/assignments/2021/11/30/A13.html">A13</a>
+- Review (Extra Credit)<br />
+&nbsp; Assigned: Nov 30<br />
+&nbsp; Due: Dec 07 09:29:59 AM<br />
+&nbsp; Graded: Dec 13<br />
+</p >
+</td>
+</tr>
+</table>
+  </div>
+</article>
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">Contact:</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+         <a href="http://www.cs.arizona.edu/">Department of Computer Science</a><br />
+         <a href="http://www.arizona.edu/">University of Arizona</a><br />
+         754 Gould-Simpson<br />
+         1040 E. 4th Street<br />
+         Tucson, AZ 85721, USA<br />
+         Phone: +1-520-621-3153<br />
+         <br />
+         Email: [username]@arizona.edu, my username is josh.<br />
+         <br />
+         Last Updated: 2022-10-25 16:09:47 -0700
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
